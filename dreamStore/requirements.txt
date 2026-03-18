@@ -1,0 +1,7 @@
+flask==2.0.3
+flask-sqlalchemy==3.0.3
+flask-migrate==4.0.4
+PyMySQL==1.0.2
+python-dotenv==0.19.2
+pyjwt==2.3.0
+requests==2.26.0
