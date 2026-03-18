@@ -1,0 +1,11 @@
+<view class="smile-dialog-container {{smileIsShow?'show':'hide'}}">
+    <view class="smile-dialog-content">
+      <view class="smile-dialog-header">
+        <text>{{title}}</text>
+      </view>
+      <image src="https://pic.616pic.com/ys_bnew_img/00/16/96/Y3aVFkINTY.jpg" mode=""/>
+    </view>
+    <view class="smile-dialog-footer">
+        <button bind:tap="confirm" size="mini" class="smile-dialog-q">我真棒</button>
+    </view>
+</view>

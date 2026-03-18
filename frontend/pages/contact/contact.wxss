@@ -1,0 +1,62 @@
+.container {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tips {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+}
+
+.login-btn {
+  width: 80%;
+  background: #07c160;
+  color: white;
+  border-radius: 50rpx;
+}
+
+/* 用户信息容器 */
+.user-info-container {
+  display: flex;          /* 启用flex布局 */
+  align-items: center;    /* 垂直居中 */
+  padding: 20rpx;         /* 内边距 */
+  background: #fff;       /* 背景色 */
+}
+
+/* 用户头像样式 */
+.user-avatar {
+  width: 80rpx;          /* 头像宽度 */
+  height: 80rpx;         /* 高度与宽度相等保持正方形 */
+  border-radius: 50%;    /* 圆形效果 */
+  margin-right: 20rpx;   /* 头像与文字间距 */
+  border: 1rpx solid #eee; /* 可选边框 */
+}
+
+/* 用户名样式 */
+.username {
+  font-size: 28rpx;      /* 字号 */
+  color: #333;           /* 文字颜色 */
+  font-weight: 500;      /* 中等粗细 */
+}
+
+.user-avatar {
+  width: 10vw;  /* 视窗宽度单位 */
+  height: 10vw;
+}
+
+.score {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.logout-btn {
+  width: 60%;
+  margin-top: 60rpx;
+  border: 1rpx solid #ddd;
+  color: #666;
+} 
+
+

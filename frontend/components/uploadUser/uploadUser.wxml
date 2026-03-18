@@ -1,0 +1,36 @@
+<view class="input-dialog-container {{isShow?'show':'hide'}}">
+  <view class="dialog-header">
+      <text>{{title}}</text>
+  </view>
+  <view class="dialog-content">
+      <input type="text" placeholder="{{placeholderText}}" bind:input="onInputChange"/>
+  </view>
+
+  <view class="upload-container">
+    <!-- 预览区域 -->
+    <block wx:if="{{previewImages.length > 0}}">
+      <image 
+        class="preview-image" 
+        src="{{previewImages}}" 
+        mode="aspectFill"
+        bind:tap="handleUpload"
+      />
+    </block>
+    
+    <!-- 上传按钮 -->
+    <block wx:else>
+      <button 
+        class="upload-button {{customClass}}"
+        bind:tap="handleUpload"
+        loading="{{loading}}"
+      >
+        {{buttonText}}
+      </button>
+    </block>
+  </view>
+
+  <view class="dialog-footer">
+      <button bind:tap="confirm" size="mini" class="dialog-q">确定</button>
+      <button bind:tap="cancel" size="mini" class="dialog-x">取消</button>
+  </view>
+</view>

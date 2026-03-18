@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/store/store",
+    "pages/contact/contact",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2b4b6b",
+    "navigationBarTitleText": "心愿屋",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "任务列表",
+        "iconPath": "/image/tarBar/首页.png",
+        "selectedIconPath": "/image/tarBar/首页-active.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "兑换商店",
+        "iconPath": "/image/tarBar/消息.png",
+        "selectedIconPath": "/image/tarBar/消息-active.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "个人主页",
+        "iconPath": "/image/tarBar/账号.png",
+        "selectedIconPath": "/image/tarBar/账号-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

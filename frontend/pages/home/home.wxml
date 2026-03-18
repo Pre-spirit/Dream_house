@@ -1,0 +1,27 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+<!-- <import src="/taskList.wxml"/> -->
+
+<!-- <view>
+  <image src="https://preview.qiantucdn.com/58pic/71/00/18/53n58PICPnzmqGtYCyb5N_origin_PIC2018.jpg!w1024_new_small_1"/>
+</view> -->
+
+<view class="header">
+  <view class="cross-button" bind:tap="showInputDialog"></view>
+  <inputDialog title="请输入新目标" isShow="{{inputDialogIsShow}}" bind:confirm="onInputDialogConfirm" bind:cancel="onInputDialogCancel"/>
+</view>
+
+
+
+<view wx:for="{{taskData}}" wx:key="id" class="taskList {{taskIsShow?'show':'hide'}}">
+  <!-- <template is="taskList" data="{{item}}"/> -->
+  <text class="text">{{item.task}}</text> 
+  <text>{{item.dream_score}}</text>
+    <button bind:tap="finishButton" class="containerButton" type="primary" size="mini" id="{{item.id}}" disabled="{{item.finish}}">
+      {{item.finish ? "已完成" : "未完成"}}
+    </button>
+    <button bind:tap="delTask" class="delTaskButton" id="{{item.id}}" size="mini" type="warn">删除</button>
+    <smile title="又优秀了一点" smileIsShow="{{smileIsShow}}" bind:confirm="onSmileConfirm"/>
+</view>
+
+

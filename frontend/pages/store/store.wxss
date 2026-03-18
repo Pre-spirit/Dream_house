@@ -1,0 +1,124 @@
+/* pages/message/message.wxss */
+.header {
+  height: 50px;
+  background-color: #747ca7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cross-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.cross-button::before,
+.cross-button::after {
+  content: '';
+  position: absolute;
+  background-color: #e2e5e9;
+}
+
+.cross-button::before {
+  width: 8px;
+  height: 40px;
+  left: 16px;
+}
+
+.cross-button::after {
+  width: 40px;
+  height: 8px;
+  top: 16px;
+}
+
+.swiper-view {
+  height: 400rpx;
+}
+
+.swiper-view image {
+  height: 100%;
+  width: 100%;
+}
+
+/* .grid-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  width: 33.33%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1rpx solid #efefef;
+  border-bottom: 1rpx solid #efefef;
+  box-sizing: border-box;
+}
+
+.grid-item image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.grid-item text {
+  font-size: 24rpx;
+  margin: 10rpx;
+} */
+
+/* 九宫格样式 */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  position: relative;
+  width: 33.33%;
+  height: 0;
+  padding-bottom: 33.33%; /* 保持正方形 */
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 6rpx solid #ffffff; /* 白色间隔 */
+}
+
+.grid-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.grid-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16rpx;
+  color: white;
+  font-size: 20rpx;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.grid-text-s {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 16rpx;
+  color: white;
+  font-size: 24rpx;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* 点击效果 */
+.grid-item:active .grid-image {
+  transform: scale(0.95);
+}
+
+

@@ -1,0 +1,27 @@
+<!-- 未登录状态 -->
+<view wx:if="{{!userInfo}}" class="container">
+  <open-data type="userAvatarUrl" class="avatar"></open-data>
+  <text class="tips">您还未登录，请先登录</text>
+  <button 
+    class="login-btn" 
+    open-type="login" 
+    bind:tap="handleLogin"
+  >微信一键登录</button>
+</view>
+
+<!-- 已登录状态 -->
+<view wx:else class="container">
+  <view class="user-info-container">
+    <image src="{{userInfo.user_photo}}" class="user-avatar"></image>
+    <text class="username">{{userInfo.user_name}}</text>
+  </view>
+  <upUserData title="更新用户名与头像" isShow="{{IFFlag}}" serverUrl="https://pre-spirit.cn/upload" bind:uploadSuccess="handleUploadSuccess"  bind:confirm="onAddConfirm" bind:cancel="onAddCancel"/>
+  <text class="score">当前积分：{{userInfo.user_current_score}}</text>
+    
+  <button class="logout-btn" bind:tap="upUserData" size="mini" type="primary">更新用户资料</button>
+  <view class="action-area">
+    <button class="logout-btn" bindtap="handleLogout">退出登录</button>
+  </view>
+  <!-- <upload-image IfFlag="{{IfFlag}}" bind:uploadSuccess="handleUploadSuccess" serverUrl="http://your-server-address:5000/upload"></upload-image> -->
+</view>
+

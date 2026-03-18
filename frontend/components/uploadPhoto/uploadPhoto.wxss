@@ -1,0 +1,32 @@
+/* components/addItems.wxss */
+.hide {
+  display: none;
+}
+
+.uPshow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 30%;
+  height: 50%;
+  background-color: rgba (0, 0, 0, 0.4);
+}
+
+
+.uploadPhoto-container {
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+  z-index: 2;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+}

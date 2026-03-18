@@ -1,0 +1,2 @@
+<!-- components/uploadPhoto/uploadPhoto.wxml -->
+<button bindtap="getUserInfo">选择头像</button>

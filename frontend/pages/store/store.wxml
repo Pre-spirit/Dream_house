@@ -1,0 +1,24 @@
+<!--pages/message/message.wxml-->
+<!-- 轮播图 -->
+
+<view class="header">
+  <view class="cross-button" bind:tap="onAddProduct"></view>
+</view>
+
+<addItems title="新理想" isShow="{{IFFlag}}" serverUrl="https://pre-spirit.cn/upload" bind:uploadSuccess="handleUploadSuccess"  bind:confirm="onAddConfirm" bind:cancel="onAddCancel"/>
+
+<swiper class="swiper-view" indicator-dots 	circular autoplay>
+  <swiper-item wx:for="{{swiperData}}" wx:key="id">
+    <image src="{{item.image}}"/>
+  </swiper-item>
+</swiper>
+
+<!-- 九宫格 -->
+<view class="grid-container">
+  <view class="grid-item" wx:for="{{gridData}}" wx:key="item_id">
+    <image class="grid-image" src="{{item.dream_photo}}" show-menu-by-longpress/>
+    <text class="grid-text">{{item.dream_item}}</text>
+    <text class="grid-text-s">{{item.dream_consume_score}}</text>
+    <button bind:tap="exchange" type="primary" disabled="{{item.is_exchange}}" id="{{item.item_id}}" size="mini" class="exchangeB">兑换</button>
+  </view>
+</view>

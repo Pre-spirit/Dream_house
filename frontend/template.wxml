@@ -1,0 +1,6 @@
+<template name="taskList">
+  <view>
+    <switch></switch>
+    <text>{{item.task}}</text>
+  </view>
+</template>

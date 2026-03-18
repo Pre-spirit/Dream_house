@@ -1,0 +1,8 @@
+<template name="taskList">
+  <view>
+    <text>{{item.task}}</text>
+    <button bind:tap="finishButton" class="containerButton" type="primary" size="mini" id="{{item.id}}">
+      {{item.finish ? "已完成" : "未完成"}}
+    </button>
+  </view>
+</template>

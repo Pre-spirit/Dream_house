@@ -1,0 +1,67 @@
+/* pages/home/home.wxss */
+.hide{
+  display: none;
+}
+
+.show{
+  display: flex;
+}
+
+.header {
+  height: 50px;
+  background-color: #747ca7;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 水平居中 */
+}
+
+.cross-button {
+  position: relative;
+   width: 40px; /* 十字形的宽度 */
+  height: 40px; /* 十字形的高度 */
+  cursor: pointer; /* 鼠标指针样式 */
+}
+
+.cross-button::before,
+.cross-button::after {
+  content: '';
+  position: absolute;
+  background-color: #e2e5e9; /* 十字形颜色 */
+}
+
+.cross-button::before {
+  width: 8px; /* 十字的横杆宽度 */
+  height: 40px; /* 十字的高度 */
+  left: 16px; /* 横杆居中 */
+}
+
+.cross-button::after {
+  width: 40px; /* 十字的竖杆高度 */
+  height: 8px; /* 十字的竖杆宽度 */
+  top: 16px; /* 竖杆居中 */
+}
+
+.taskList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rpx;
+  z-index: 1;
+}
+
+.text{
+  width: 230px;
+  height: 32px;
+}
+
+.containerButton {
+  margin-right: 10rpx;
+  width: 100%;
+  z-index: 1;
+}
+
+.delTaskButton{
+  margin-right: 10rpx;
+  z-index: 1;
+}
+

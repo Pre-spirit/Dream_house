@@ -1,0 +1,51 @@
+.hide {
+  display: none;
+}
+/* 显示状态 */
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 30%;
+  height: 50%;
+  background-color: rgba (0, 0, 0, 0.4);
+}
+
+.input-dialog-container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+  z-index: 2;
+}
+  
+.dialog-header {
+  padding: 10px;
+}
+  
+.dialog-content {
+  padding: 10px;
+}
+  
+.dialog-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.dialog-q {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 30px;
+}
+
+.dialog-x {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+

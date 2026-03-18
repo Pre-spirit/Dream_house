@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "image-uploader": "/components/uploadImage/uploadImage",
+    "input-dialog": "/components/inputDialog/inputDialog"
+  }
+}
